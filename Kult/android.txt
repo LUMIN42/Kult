@@ -1,0 +1,3 @@
+title=Cult
+author=LUMIN42
+orientation=portrait

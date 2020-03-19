@@ -1,0 +1,107 @@
+<RoundButton>:
+
+    text: " "
+    size: 1,1
+    font_size: 50
+    xalign: "middle"
+    back_color: (0.4,0.4,0.4,1)
+    background_color:(0,0,0,0)
+    canvas.before:
+        Color:
+            rgba: self.back_color if self.state == "normal" else (self.back_color[0]/4.0*3,self.back_color[1]/4.0*3,self.back_color[2]/4.0*3,1)
+        RoundedRectangle:
+            radius: [self.height/2]
+            size: self.size
+            pos: self.pos
+
+
+<HomeScreen>:
+
+
+    FloatLayout:
+        canvas:
+            Color:
+                rgb: 0.9,0.3,0.5
+            Rectangle:
+
+                size: self.size
+                pos: self.pos
+
+
+
+
+        GridLayout:
+            pos_hint: {"y":0.65,"x":0.05}
+            size_hint:0.9,0.35
+            cols: 1
+            Image:
+                source: "Images/Cultist.png"
+
+            GridLayout:
+                rows: 1
+                Image:
+                    source: "Images/Seer.png"
+                Image:
+                    source: "Images/Villager.png"
+
+
+        Label:
+            text: "The Cult"
+            pos_hint: {"x":0,"y":0.7325}
+            size_hint: 1,0.175
+            font_size: 50
+            color: 1,1,1,1
+            bold: True
+            canvas.before:
+                Color:
+                    rgba: (0.4,0.4,0.4,.5)
+                RoundedRectangle:
+                    radius: [self.width/2]
+                    size: self.size
+                    pos: self.pos
+
+
+        FloatLayout:
+            pos_hint: {"x":0.05,"y":0.03}
+            size_hint: 0.9,0.6
+
+
+            canvas:
+                Color:
+                    rgb: 0.6,0.6,0.8
+                RoundedRectangle:
+                    radius: [2.0/21*self.height]
+                    size: self.size
+                    pos: self.pos
+
+            RoundButton:
+                pos_hint: {"y":16.0/21, "x":0.05}
+                size_hint: 0.9,4.0/21
+                text: "Play"
+
+
+
+            RoundButton:
+                pos_hint: {"y":11.0/21, "x":0.05}
+                size_hint: 0.9,4.0/21
+                text: "Profile"
+
+
+            RoundButton:
+                pos_hint: {"y":6.0/21, "x":0.05}
+                size_hint: 0.9,4.0/21
+                text: "Roles"
+
+
+            RoundButton:
+                pos_hint: {"y":1.0/21, "x":0.05}
+                size_hint: 0.9,4.0/21
+                text: "Options"
+
+
+
+
+
+
+
+
