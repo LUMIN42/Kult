@@ -1,2 +1,0 @@
-# Kult
-hra kult
